@@ -11,6 +11,7 @@ app.config.from_object(Config)
 #print('等会谁（哪个包或模块）在使用我：',__name__)
 
 login = LoginManager(app)
+login.login_view = 'login'
 db = SQLAlchemy(app)#数据库对象
 migrate = Migrate(app, db)#迁移引擎对象
 
